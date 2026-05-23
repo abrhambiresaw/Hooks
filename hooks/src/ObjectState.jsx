@@ -9,8 +9,11 @@ function ObjStateEx() {
   });
 
   const updateColor = () => {
-    setcar({...car, color: "blue"});//to keep other properties in car object 
-  };
+  setcar((prevState) => ({
+    ...prevState, color: "blue"}));
+    //If state updates happen very fast
+    //prevState always gives you the LATEST state
+};
 
   console.log(car);
 
@@ -18,7 +21,9 @@ function ObjStateEx() {
     <div>
       <h2>My {car.brand}</h2>
       <h2>the color is {car.color}</h2>
-       
+      <button onClick={updateColor}>
+        Change Color
+      </button>
     </div>
   )
 }
