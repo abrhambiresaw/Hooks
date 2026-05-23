@@ -9,7 +9,7 @@ function ObjStateEx() {
   });
 
   const updateColor = () => {
-    setcar({...car, color: "blue"});
+    setcar({...car, color: "blue"});//to keep other properties in car object 
   };
 
   console.log(car);
@@ -18,7 +18,6 @@ function ObjStateEx() {
     <div>
       <h2>My {car.brand}</h2>
       <h2>the color is {car.color}</h2>
-      {/* <button onClick={updateColor}>change color</button> */}
        
     </div>
   )
