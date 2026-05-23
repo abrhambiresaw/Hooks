@@ -13,7 +13,9 @@ function App() {
     <button onClick={() => {setCount(count + 1);
                             ReactEvent();
       }} > Add </button> <br /><br />
-      <button onClick={() => setCount(count - 1)}>minus</button>
+      <button onClick={() => setCount(count - 1)}>minus</button><br />
+
+      <button onClick={() => setCount(0)}>Reset</button>
       <h2 >click</h2>
     </div>
   )
