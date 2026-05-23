@@ -6,7 +6,7 @@ function UsingUseEffect() {
 
   useEffect(() => {
     document.title = `count: ${count}`;
-  });
+  },[age]);//[age] is called dependancy
 
   return (
     <div>
