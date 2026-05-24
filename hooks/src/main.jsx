@@ -9,9 +9,9 @@ import Component1 from './useContext/component1.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    <UserList />
+    {/* <UserList />
     <ObjStateEx />
-    <UsingUseEffect />
+    <UsingUseEffect /> */}
     
     <Component1 />
   </StrictMode>,
