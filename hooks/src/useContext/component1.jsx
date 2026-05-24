@@ -1,16 +1,23 @@
-import Component2 from "./component2";
-import React, { useState } from "react";
-import './style.css';
+import React, { useState, createContext } from "react";
 
-function Component1(){
-  
+import Component2 from "./component2";
+
+import "./style.css";
+
+export const UserContext = createContext();
+
+function Component1() {
   const [user, setUser] = useState("Abrham");
-  return(
+  return (
     <div className="box">
       <h1>Component1</h1>
-      <Component2 />
+      <h2>{`Hello ${user}`}</h2>
+
+      <UserContext.Provider value={user}>
+        <Component2 />
+      </UserContext.Provider>
     </div>
-  )
+  );
 }
 
 export default Component1;
